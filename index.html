@@ -1,0 +1,24 @@
+<head>
+  {{ resources|safe }}
+</head>
+
+<header>
+  {{ script|safe }}
+</header>
+
+{% block content %}
+
+<form action="{{ url_for('index') }}" methods=["GET"]>
+
+  <label for="reading">Reading:</label><br> 
+  <input type="text" id="reading" name="reading">
+
+  <input type="submit" id="submit" name="submit"><br> 
+  
+</form>
+
+<h1>Recent Peak Flow measurements:</h1>
+<div>
+  {{ div|safe }}
+</div>
+{% endblock %}
