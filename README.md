@@ -12,3 +12,17 @@ The basic functionality is all there.  I need to:
 * Make the page a little more aesthetically pleasing, it is very basic at the moment.
 * Figure out how to scale it properly for mobile devices
 * I'm told that values less than 80% of your usual reading are the threshold for being concerned about an exacerbation.  It would be good to have some way to calculate this value from a certain past period (?), and to show this on the graph somehow.
+* It would be good to be able to load the page after submitting data with a message, either stating that the value was successfully recieved, or giving a specific error.
+* Maybe it would be helpful to have a way to delete the previous value, in case a mistake is made?
+
+
+<h3>Installation</h3>
+
+* Create a virtual environment in a terminal: `python3 -m venv ./peakFlowLogger` (replace `./PeakFlowLogger` with your desired location)
+* Go into the virtual environment (`cd PeakFlowLogger`) and activate it: `source ./bin/activate`.  At any point, run `deactivate` to deactivate the environment.
+* Install dependencies: `python3 -m pip install Flask bokeh`
+* Copy `website.py` and `mkDB.py` to your virtual environment.  Create a directory there called `templates`, and copy `index.html` there.
+* Create the database which will hold all of the data: `python3 mkDB.py`.  A file called `peakFlowData.db` should appear beside the Python scripts.
+* Run Flask: `flask --app website run --host=0.0.0.0`
+  * (`--host=0.0.0.0` makes the website available across your local network, but not over the internet)
+* You should now be able to access the website at port 5000 at the IP address of the machine.  For example, if the IP address is `192.168.1.2`, use `192.168.1.2:5000` as the address in a web browser.
