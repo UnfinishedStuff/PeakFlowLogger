@@ -8,13 +8,17 @@ PeakFlowLogger uses the [Flask Python web framework](https://flask.palletsprojec
 
 If you submit an invalid value, like text, or a number below 60 or above 900 (the limits of the peak flow meter I have), the website will refresh with an error telling you the problem.
 
-<h3>Current state</h3>
+ <img src="https://github.com/UnfinishedStuff/PeakFlowLogger/blob/main/PeakFlowMeter.jpg?raw=true)" alt="Screenshot of the PeakFlowMeter website" style="width:500px;height:710px;"> 
+
+
+<h2>Current state</h2>
 The basic functionality is all there.  I need to:
 
 * Make the page a little more aesthetically pleasing, it is very basic at the moment.
 * Maybe it would be helpful to have a way to delete the previous value, in case a mistake is made?
 
-<h3>Installation</h3>
+
+<h2>Installation</h2>
 
 * Create a virtual environment in a terminal: `python3 -m venv ./peakFlowLogger` (replace `./PeakFlowLogger` with your desired location)
 * Go into the virtual environment (`cd PeakFlowLogger`) and activate it: `source ./bin/activate`.  At any point, run `deactivate` to deactivate the environment.
