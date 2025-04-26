@@ -4,6 +4,9 @@
 
 <header>
   {{ script|safe }}
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
 </header>
 
 {% block content %}
@@ -16,6 +19,8 @@
   <input type="submit" id="submit" name="submit"><br> 
   
 </form>
+{{ message|safe }}
+
 
 <h1>Recent Peak Flow measurements:</h1>
 <div>
